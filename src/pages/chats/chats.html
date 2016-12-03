@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Chats</ion-title>
+        <ion-buttons end>
+            <ion-spinner color="light" *ngIf="!(chats | async)"></ion-spinner>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+     <a ion-item *ngFor="let chat of chats | async" (click)="openChat(chat.$key)">
+        <ion-avatar item-left>
+                <img *ngIf="!(chat.info | async).picture" src="assets/images/default.jpg">
+                <img *ngIf="(chat.info | async).picture" src="{{(chat.info | async).picture}}">
+        </ion-avatar>
+        <span>{{(chat.info | async).email}}</span>
+     </a>
+</ion-content>

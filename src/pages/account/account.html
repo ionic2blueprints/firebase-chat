@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Account</ion-title>   
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-card>
+            <img *ngIf="!user.picture" src="assets/images/default.jpg"/>
+            <img *ngIf="user.picture" src="{{user.picture}}"/>
+        </ion-card>
+        <ion-item>
+            <button ion-button full (click)="updatePicture()">Change Picture</button>
+        </ion-item>
+        <a ion-item primary (click)="logout()">
+            Logout
+        </a>
+    </ion-list>
+</ion-content>
