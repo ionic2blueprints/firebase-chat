@@ -7,4 +7,4 @@
 * Add the required platform like ```ionic platform add android``` or ```ionic platform add ios```
 * Then ```ionic build android``` or ```ionic build ios```
 
-# Based on Ionic 2 RC3
+# Based on Ionic 2.1.0

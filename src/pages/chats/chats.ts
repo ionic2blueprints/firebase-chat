@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Observable } from 'rxjs/Rx';
 import { UserProvider } from '../../providers/user-provider/user-provider';
 import { ChatsProvider } from '../../providers/chats-provider/chats-provider';
 import { AngularFire } from 'angularfire2';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { ChatViewPage }  from '../chat-view/chat-view';
 

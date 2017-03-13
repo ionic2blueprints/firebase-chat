@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
+import { FirebaseListObservable } from 'angularfire2';
 import { UserProvider } from '../../providers/user-provider/user-provider';
 import { ChatViewPage } from '../chat-view/chat-view';
 
@@ -8,7 +8,7 @@ import { ChatViewPage } from '../chat-view/chat-view';
     templateUrl: 'users.html'
 })
 export class UsersPage {
-    users:Observable<any[]>;
+    users:FirebaseListObservable<any[]>;
     uid:string;
     constructor(public nav: NavController, public userProvider: UserProvider) {}
 
